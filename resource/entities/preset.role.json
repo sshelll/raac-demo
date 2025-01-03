@@ -1,0 +1,26 @@
+[
+  {
+    "uid": {
+      "type": "Role",
+      "id": "SuperAdmin"
+    },
+    "attrs": { "db_id": 1 },
+    "parents": []
+  },
+  {
+    "uid": {
+      "type": "Role",
+      "id": "SystemAdmin"
+    },
+    "attrs": { "db_id": 2 },
+    "parents": []
+  },
+  {
+    "uid": {
+      "type": "Role",
+      "id": "HR"
+    },
+    "attrs": { "db_id": 3 },
+    "parents": []
+  }
+]

@@ -1,0 +1,43 @@
+# system settings in [1, 100000)
+[[action]]
+id = 1
+atom = "/system_setting/view"
+resource = "SystemSetting"
+desc = "can view system settings"
+
+[[action]]
+id = 2
+atom = "/system_setting/modify"
+resource = "SystemSetting"
+desc = "can modify system settings"
+
+# talent in [100000, 200000)
+[[action]]
+id = 100000
+atom = "/talent/view"
+resource = "Talent"
+desc = "can view talent"
+
+[[action]]
+id = 100001
+atom = "/talent/modify"
+resource = "Talent"
+desc = "can modify talent"
+
+[[action]]
+id = 100002
+atom = "/talent/delete"
+resource = "Talent"
+desc = "can delete talent"
+
+[[action]]
+id = 100003
+atom = "/talent/create"
+resource = "Talent"
+desc = "can create talent"
+
+[[action]]
+id = 100004
+atom = "/talent/view_hiden"
+resource = "Talent"
+desc = "can view hiden talent"
