@@ -13,7 +13,7 @@ dump_schema:
 	@sql-formatter --fix ${SQLITE_SCHEMA}
 
 .PHONY: dump_all
-dump_all:
+dump_all: dump_schema
 	@sqlite3 raac.db ".dump" > ${SQLITE_ALL}
 	@sql-formatter --fix ${SQLITE_ALL}
 
