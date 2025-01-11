@@ -38,6 +38,6 @@ desc = "can create talent"
 
 [[action]]
 id = 100004
-atom = "/talent/view_hiden"
+atom = "/talent/view_hidden"
 resource = "Talent"
 desc = "can view hiden talent"

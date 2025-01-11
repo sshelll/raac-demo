@@ -131,7 +131,7 @@ INSERT INTO
 VALUES
   (
     100004,
-    '/talent/view_hiden',
+    '/talent/view_hidden',
     'can view hiden talent',
     'Talent'
   );
@@ -201,6 +201,11 @@ INSERT INTO
   diy_role_action_ref
 VALUES
   (6, 1, 100003);
+
+INSERT INTO
+  diy_role_action_ref
+VALUES
+  (7, 1, 100004);
 
 CREATE TABLE talent (
   id integer not null constraint talent_pk primary key,

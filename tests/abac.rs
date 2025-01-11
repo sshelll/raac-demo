@@ -8,6 +8,12 @@ async fn view_hidden_talent() {
     engine::init().await;
     let start = std::time::Instant::now();
 
+    // user 2 is a diy super admin
+    let ok = engine::check_talent_access(2, 2781, "/talent/view")
+        .await
+        .unwrap();
+    assert!(ok);
+
     // user 3 is nobody, but he has been shared
     let ok = engine::check_talent_access(3, 2781, "/talent/view")
         .await

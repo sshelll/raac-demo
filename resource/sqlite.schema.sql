@@ -38,12 +38,6 @@ CREATE TABLE IF NOT EXISTS "diy_role_action_ref" (
   action_id integer
 );
 
-CREATE INDEX user_name_index on user (name);
-
-CREATE INDEX user_preset_role_ref_user_id_index on user_preset_role_ref (user_id);
-
-CREATE UNIQUE INDEX diy_role_action_ref_diy_role_id_action_id_uindex on diy_role_action_ref (diy_role_id, action_id);
-
 CREATE TABLE talent (
   id integer not null constraint talent_pk primary key,
   hide integer not null
@@ -53,6 +47,12 @@ CREATE TABLE talent_share_ref (
   talent_id integer not null,
   user_id integer not null
 );
+
+CREATE INDEX user_name_index on user (name);
+
+CREATE INDEX user_preset_role_ref_user_id_index on user_preset_role_ref (user_id);
+
+CREATE UNIQUE INDEX diy_role_action_ref_diy_role_id_action_id_uindex on diy_role_action_ref (diy_role_id, action_id);
 
 CREATE INDEX talent_share_ref_talent_id_index on talent_share_ref (talent_id);
 
