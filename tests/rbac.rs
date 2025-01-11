@@ -8,13 +8,10 @@ async fn preset_super_admin() {
     engine::init().await;
     let start = std::time::Instant::now();
     let user_id = 1;
-    let handles: Vec<_> = (1..=1)
-        .map(|_| tokio::spawn(engine::check_talent_access(user_id, 2781, "/talent/view")))
-        .collect();
-    for h in handles {
-        let ok = h.await.unwrap().unwrap();
-        assert!(ok);
-    }
+    let ok = engine::check_talent_access(user_id, 2781, "/talent/view")
+        .await
+        .unwrap();
+    assert!(ok);
     println!("elapsed: {:?}", start.elapsed());
 }
 
@@ -24,13 +21,10 @@ async fn diy_super_admin() {
     engine::init().await;
     let start = std::time::Instant::now();
     let user_id = 2;
-    let handles: Vec<_> = (1..=1)
-        .map(|_| tokio::spawn(engine::check_talent_access(user_id, 2781, "/talent/view")))
-        .collect();
-    for h in handles {
-        let ok = h.await.unwrap().unwrap();
-        assert!(ok);
-    }
+    let ok = engine::check_talent_access(user_id, 2781, "/talent/view_hidden")
+        .await
+        .unwrap();
+    assert!(ok);
     println!("elapsed: {:?}", start.elapsed());
 }
 

@@ -62,3 +62,9 @@ Several days later, the annoying PM says: "Here comes another brand new feature!
 So you create a new table named `talent_shares`, which links the `Talent` to the `Nobody`.
 
 And now you must be careful when you're trying to reject someone's request to view a `Talent`, because the `Talent` may have been shared to him by a powerful user.
+
+## Usage
+
+- use `make restore_db` to recover the sqlite
+- use `cargo test` to run the tests(you can find them in ./tests)
+- use `cargo bench` to run the benchmarks(you can find them in ./benches)
