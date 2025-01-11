@@ -14,6 +14,13 @@ async fn view_hidden_talent() {
         .unwrap();
     assert!(ok);
 
+    // user 2 has the atom
+    let ok = engine::check_atom_diy(2, "/talent/view_hidden")
+        .await
+        .unwrap();
+    assert!(ok);
+
+    // user 2 can access by a more strict atom
     let ok = engine::check_talent_access(2, 2781, "/talent/view_hidden")
         .await
         .unwrap();
