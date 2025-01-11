@@ -14,6 +14,11 @@ async fn view_hidden_talent() {
         .unwrap();
     assert!(ok);
 
+    let ok = engine::check_talent_access(2, 2781, "/talent/view_hidden")
+        .await
+        .unwrap();
+    assert!(ok);
+
     // user 3 is nobody, but he has been shared
     let ok = engine::check_talent_access(3, 2781, "/talent/view")
         .await

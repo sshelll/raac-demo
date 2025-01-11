@@ -1,6 +1,6 @@
 permit (
     principal is User,
-    action in Action::"/talent/view",
+    action in [Action::"/talent/view", Action::"/talent/view_hidden"],
     resource is Talent
 )
 when {
