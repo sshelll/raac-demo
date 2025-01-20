@@ -1,4 +1,4 @@
-# RAAC-Demo(WIP)
+# RAAC-Demo
 
 RBAC + ABAC = RAAC, based on [cedar-policy](https://github.com/cedar-policy/cedar), built with Rust.
 
